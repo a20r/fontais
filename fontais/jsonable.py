@@ -9,6 +9,7 @@ class Jsonable(object):
     not start with "__" will be included in the JSON string returned by
     the to to_json method
     """
+
     def to_json(self):
         jsonable_vars = dict()
         for key, elem in vars(self).iteritems():

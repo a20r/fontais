@@ -8,6 +8,13 @@ import threading
 
 class HttpHeart(object):
 
+    """
+    This will automatically send heartbeat messages on a separate thread
+    to ns_host at ns_port on the specified route. You are also able to
+    customize data sent with each heartbeat message and the delay between
+    messages.
+    """
+
     def __init__(self, ns_host, ns_port, route="/alive", data=None, delay=1):
         self.beat_url = self.get_beat_url(ns_host, ns_port)
         self.delay = delay  # second
@@ -42,6 +49,9 @@ class HttpHeart(object):
 
     def kill(self):
         self.beating = False
+
+    def set_data(self, data):
+        self.data = data
 
 
 def make(*args, **kwargs):
