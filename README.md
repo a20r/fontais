@@ -4,3 +4,5 @@ Utility functions and classes that I use for various projects. The word
 
 ## Requirements
 - flask
+- numpy
+- matplotlib
