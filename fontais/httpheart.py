@@ -52,7 +52,3 @@ class HttpHeart(object):
 
     def set_data(self, data):
         self.data = data
-
-
-def make(*args, **kwargs):
-    return HttpHeart(*args, **kwargs)

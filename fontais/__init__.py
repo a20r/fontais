@@ -1,11 +1,8 @@
 
-__all__ = ["crossdomain", "httpheart", "jsonable", "point", "listmanip",
-           "decorators", "table"]
-
-import crossdomain
-import httpheart
-import jsonable
-import point
-import listmanip
-import table
-import decorators
+from crossdomain import *
+from httpheart import *
+from jsonable import *
+from point import *
+from listmanip import *
+from table import *
+from decorators import *

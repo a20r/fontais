@@ -75,10 +75,6 @@ class Point(object):
             return False
 
 
-def make(*args, **kwargs):
-    return Point(*args, **kwargs)
-
-
 def get_random_point(width, height):
     x = random.uniform(0, width)
     y = random.uniform(0, height)
