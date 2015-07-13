@@ -6,3 +6,4 @@ Utility functions and classes that I use for various projects. The word
 - flask
 - numpy
 - matplotlib
+- nose

@@ -1,7 +1,12 @@
 
+import random
+
+
 """
 A collection of list manipulation functions that I commonly use
 """
+
+__all__ = ["k_max", "k_argmax", "k_min", "k_argmin", "random_list"]
 
 
 def k_max(l, k):
@@ -40,3 +45,15 @@ def k_argmin(l, k, func):
     """
     l_map = map(func, l)
     return k_min(l_map, k)
+
+
+def random_list(length, dmin=0, dmax=1, dtype=int):
+    ret_list = list()
+    for _ in xrange(length):
+        if dtype == str:
+            dmin = ord(dmin)
+            dmax = ord(dmax)
+            ret_list.append(chr(int(random.random() * (dmax - dmin) + dmin)))
+        else:
+            ret_list.append(dtype(random.random() * (dmax - dmin) + dmin))
+    return ret_list
