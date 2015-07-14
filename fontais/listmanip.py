@@ -57,3 +57,7 @@ def random_list(length, dmin=0, dmax=1, dtype=int):
         else:
             ret_list.append(dtype(random.random() * (dmax - dmin) + dmin))
     return ret_list
+
+
+def random_str(length, dmin='a', dmax='z'):
+    return "".join(random_list(length, dmin=dmin, dmax=dmax, dtype=str))
