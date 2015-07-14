@@ -49,10 +49,10 @@ def k_argmin(l, k, func):
 
 def random_list(length, dmin=0, dmax=1, dtype=int):
     ret_list = list()
+    dmin = ord(dmin)
+    dmax = ord(dmax)
     for _ in xrange(length):
         if dtype == str:
-            dmin = ord(dmin)
-            dmax = ord(dmax)
             ret_list.append(chr(int(random.random() * (dmax - dmin) + dmin)))
         else:
             ret_list.append(dtype(random.random() * (dmax - dmin) + dmin))

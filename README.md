@@ -7,3 +7,4 @@ Utility functions and classes that I use for various projects. The word
 - numpy
 - matplotlib
 - nose
+- coverage
