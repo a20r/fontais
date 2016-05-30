@@ -6,10 +6,10 @@ class memoize(object):
 
     def __call__(self, f):
         def __inner(*args, **kwargs):
-            if not (args, kwargs) in memoize.args:
+            if not args in memoize.args:
                 ret_val = f(*args, **kwargs)
-                memoize.args[args, kwargs] = ret_val
-            return memoize.args[args, kwargs]
+                memoize.args[args] = ret_val
+            return memoize.args[args]
         return __inner
 
 
