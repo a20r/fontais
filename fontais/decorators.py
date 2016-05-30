@@ -45,7 +45,6 @@ class on_import(object):
         self.already_imported = list()
 
     def __call__(self, func):
-        global already_imported
         name = func.__name__ + " " + func.__module__
         if not name in self.already_imported:
             self.already_imported.append(name)

@@ -39,8 +39,7 @@ class Point(object):
         return math.sqrt(
             pow(self.x - other_point.x, 2) +
             pow(self.y - other_point.y, 2) +
-            pow(self.z - other_point.z, 2)
-        )
+            pow(self.z - other_point.z, 2))
 
     def to_unit_vector(self):
         mag = self.dist_to(Point(0, 0, 0))
